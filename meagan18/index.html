@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meagan's Midsummer Night Dream</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="scene-opening">
+        <!-- Canvas Layers -->
+        <canvas id="bg-canvas"></canvas><canvas id="stars"></canvas>
+        <canvas id="ripples"></canvas><canvas id="fireflies"></canvas>
+        
+        <section id="world"><div id="lotus-area"></div></section>
+        
+        <!-- Skip Button -->
+        <button id="skip-btn" class="elegant-button">Skip to the end</button>
+
+        <!-- Interactive Elements -->
+        <div id="lotus-container" class="hidden-reveal">
+            <img src="assets/images/lotus.png" alt="Lotus" id="lotus-drawing">
+            <button id="closer-look-btn" class="elegant-button">Take a closer look</button>
+        </div>
+
+        <div id="scroll-container" class="hidden-reveal">
+            <div class="scroll-text scroll-text-top">A luminous whisper.</div>
+            <div class="scroll-image-wrapper">
+                <img src="assets/images/scroll.png" alt="Scroll" id="scroll-drawing">
+                <div id="scroll-seal"></div>
+            </div>
+            <div class="scroll-text scroll-text-bottom">Tap the scroll.</div>
+        </div>
+
+        <!-- Dialogue UI -->
+        <section id="dialogue">
+            <div id="dialogue-gradient"></div>
+            <div id="dialogue-content">
+                <div class="ui-flourish">⊹ ─── ✦ ─── ⊹</div>
+                <p id="speaker"></p>
+                <p id="dialogue-text"></p>
+                <span id="continue">✦ Tap to continue</span>
+                <div class="ui-flourish" style="margin-top:25px;">⊹ ─── ✦ ─── ⊹</div>
+            </div>
+        </section>
+
+        <!-- Cursor & Flash -->
+        <canvas id="cursor-trail"></canvas>
+        <div id="custom-pointer"><div class="pointer-core"></div><div class="pointer-ring"></div></div>
+
+        <!-- White Flash & Loading -->
+        <div id="white-flash">
+            <div id="loading-screen">
+                <div class="loading-content">
+                    <div class="lotus-loading-wrapper">
+                        <svg class="lotus-loading lotus-outline" viewBox="0 0 100 100">
+                            <path d="M50 85 C 50 85, 45 45, 10 30 C 35 30, 45 60, 50 85 Z" />
+                            <path d="M50 85 C 50 85, 55 45, 90 30 C 65 30, 55 60, 50 85 Z" />
+                            <path d="M50 85 C 50 85, 30 50, 5 60 C 25 65, 40 75, 50 85 Z" />
+                            <path d="M50 85 C 50 85, 70 50, 95 60 C 75 65, 60 75, 50 85 Z" />
+                            <path d="M50 85 C 50 85, 40 30, 50 5 C 60 30, 50 85, 50 85 Z" />
+                        </svg>
+                        <svg class="lotus-loading lotus-fill" viewBox="0 0 100 100">
+                            <path d="M50 85 C 50 85, 45 45, 10 30 C 35 30, 45 60, 50 85 Z" />
+                            <path d="M50 85 C 50 85, 55 45, 90 30 C 65 30, 55 60, 50 85 Z" />
+                            <path d="M50 85 C 50 85, 30 50, 5 60 C 25 65, 40 75, 50 85 Z" />
+                            <path d="M50 85 C 50 85, 70 50, 95 60 C 75 65, 60 75, 50 85 Z" />
+                            <path d="M50 85 C 50 85, 40 30, 50 5 C 60 30, 50 85, 50 85 Z" />
+                        </svg>
+                    </div>
+                    <div class="ui-flourish flourish-loading">⊹ ─── ✦ ─── ⊹</div>
+                    <p class="loading-text">Unfolding the dream...</p>
+                    <div class="ui-flourish flourish-loading">⊹ ─── ✦ ─── ⊹</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
